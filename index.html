@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en" ng-app="myapp">
 <head>
@@ -55,6 +56,261 @@
 <script type="text/javascript" src="App/Controller/indexController.js"></script>
 <script type="text/javascript" src="App/Controller/homeController.js"></script>
 <script type="text/javascript" src="App/Directives/divDirective.js"></script>-->
+=======
+﻿<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="bibarani">
+    <title>Bibarani</title>
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/scripts/vegas/jquery.vegas.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <script src="assets/plugins/jquery-1.10.2.js"></script>
+    <script src="assets/plugins/bootstrap.js"></script>
+    <script src="assets/plugins/jquery.countdown.js"></script>
+    <script src="assets/js/countdown.js"></script>
+    <script src="assets/plugins/vegas/jquery.vegas.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        $(function () {
+            var calcNewYear = setInterval(function () {
+                date_future = new Date(new Date().getFullYear() + 1, 0, 1);
+                date_now = new Date();
+
+                seconds = Math.floor((date_future - (date_now)) / 1000);
+                minutes = Math.floor(seconds / 60);
+                hours = Math.floor(minutes / 60);
+                days = Math.floor(hours / 24);
+
+                hours = hours - (days * 24);
+                minutes = minutes - (days * 24 * 60) - (hours * 60);
+                seconds = seconds - (days * 24 * 60 * 60) - (hours * 60 * 60) - (minutes * 60);
+
+                $("#day-number").text(days);
+                $("#hour-number").text(hours);
+                $("#minute-number").text(minutes);
+                $("#second-number").text(seconds);
+            }, 1000);
+        });
+    </script>
+</head>
+<body>
+
+    <div class="loader"></div>
+
+    <div class="container-fluid">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Bibarani <i class="fa fa-plus"></i></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a data-toggle="modal" data-target="#mAbout" href="#mHome"> ABOUT</a></li>
+                        <li><a data-toggle="modal" data-target="#mService" href="#mService">SERVICES</a></li>
+                        <li><a data-toggle="modal" data-target="#mContact" href="#myModal">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 col-sm-12">
+                <div id="movingicon">
+                    <i class="fa fa-flask fa-spin icon-color"></i>
+                    <br>
+                    <div id="headLine" style="display: block; opacity: 0.843417;">WORKING..</div>
+                </div>
+            </div>
+            <!--/. HEAD LINE DIV-->
+            <div class="col-md-8 col-md-offset-2">
+                <div id="counter" class="hasCountdown"><div></div></div>
+                <div id="counter-default" class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="inner">
+                            <div id="day-number" class="timer-number">28</div>
+                            <div class="timer-text">DAYS</div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="inner">
+                            <div id="hour-number" class="timer-number">1</div>
+                            <div class="timer-text">HOURS</div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="inner">
+                            <div id="minute-number" class="timer-number">48</div>
+                            <div class="timer-text">MINUTES</div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="inner">
+                            <div id="second-number" class="timer-number">44</div>
+                            <div class="timer-text">SECOND</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--<div class="col-md-6 col-md-offset-3">
+
+                <div class="input-group">
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button">  <i class="fa fa-cog fa-spin subscribe-icon"></i> SUBSCRIBE ! </button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-6 col-md-offset-3">
+                <div class="social-links">
+                    <a href="#">  <i class="fa fa-facebook fa-4x"></i> </a>
+                    <a href="#">  <i class="fa fa-google-plus fa-4x"></i> </a>
+                    <a href="#">  <i class="fa fa-twitter fa-4x"></i> </a>
+                    <a href="#">  <i class="fa fa-linkedin fa-4x"></i> </a>
+
+                </div>
+            </div>-->
+        </div>
+    </div>
+    <div class="modal fade" id="mAbout" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel1"> <i class="fa fa-plus"></i> ABOUT BETA </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="mian-popup-body">
+                        <h1> <span class="fa fa-flask "></span> WHO WE ARE ?</h1>
+                        <div class="row">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Pellentesque volutpat, diam in accumsan scelerisque.
+
+                            </p>
+                            <h3> <span class="fa fa-cog fa-spin "></span> Our Aim</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Pellentesque volutpat, diam in accumsan scelerisque, tellus
+                                ligula ullamcorper urna, sed luctus velit lacus sit amet sem.
+
+                            </p>
+                            <h3> <span class="fa fa-glass"></span> Our Values</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Pellentesque volutpat, diam in accumsan scelerisque, tellus
+                                ligula ullamcorper urna, sed luctus velit lacus sit amet sem.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary back-btn" data-dismiss="modal">CLOSE ME</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/. ABOUT MODAL POPUP DIV-->
+    <div class="modal fade" id="mService" tabindex="-1" role="dialog" aria-labelledby="mService1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="mService1"> <i class="fa fa-plus"></i> OUR SERVICES </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="mian-popup-body">
+                        <h1> <span class="fa fa-thumbs-o-up "></span> WHAT WE OFFER ?</h1>
+                        <div class="row">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Pellentesque volutpat, diam in accumsan scelerisque.
+
+                            </p>
+                            <h3> <span class="fa fa-cog fa-spin "></span> Responsive Design</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Pellentesque volutpat, diam in accumsan scelerisque, tellus
+                                ligula ullamcorper urna, sed luctus velit lacus sit amet sem.
+
+
+                            </p>
+
+                            <h3> <span class="fa fa-tint "></span> Unique Design</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Pellentesque volutpat, diam in accumsan scelerisque, tellus
+                                ligula ullamcorper urna, sed luctus velit lacus sit amet sem.
+
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary back-btn" data-dismiss="modal">CLOSE ME</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/. SERVICES MODAL POPUP DIV-->
+    <div class="modal fade" id="mContact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel"> <i class="fa fa-plus"></i> CONTACT US</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="mian-popup-body">
+                        <h1> <span class="fa fa-book "></span> REACH US</h1>
+                        <div class="row">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Pellentesque volutpat, diam in accumsan scelerisque.
+
+                            </p>
+                            <h3> <span class="fa fa-cog fa-spin "></span> Our Location</h3>
+                            <p>
+                                123 UA, Newyork Street, 2078. <br />
+                                Call: +42-78-0090-00.
+
+                            </p>
+                            <br /><br />
+                            <div>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2999841.293321206!2d-75.80920404999999!3d42.75594204999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew+York!5e0!3m2!1sen!2s!4v1395313088825" class="mymap"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary back-btn" data-dismiss="modal">CLOSE ME</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+>>>>>>> 75bfa89df175647788a4e8dbb744c6cb5699b79e
 
 </body>
 </html>
