@@ -1,13 +1,11 @@
-<<<<<<< HEAD
+/bin/*
 /node_modules/*
-/readme.md
-/test.txt
-=======
-/packages.config
-/Web.config
-/Web.Debug.config
-/Web.Release.config
-/Properties
-/obj
-
->>>>>>> 75bfa89df175647788a4e8dbb744c6cb5699b79e
+/obj/*
+/Properties/*
+/ApplicationInsights
+/bibarani
+/bibarani.csproj
+/README.md
+/web.xml
+/web.Debug.xml
+/web.Release.xml
